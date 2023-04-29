@@ -1,15 +1,16 @@
 :root {
   --light-gray-clr: #f9fafb;
+  --gray-clr: #b4c3c6;
   --white-clr: #fff;
   --font-clr: #1f2937;
   --blue-clr: #009df7;
   --snow-clr: #ecfbff;
+  --brdr-radius: 5px;
 }
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border: 1px solid black;
 }
 body {
   width: 100%;
@@ -22,9 +23,13 @@ body {
 button {
   cursor: pointer;
   outline: transparent;
+  border: transparent;
 }
 button:active {
   opacity: 0.5;
+}
+ul {
+  list-style: none;
 }
 header {
   background: var(--blue-clr);
@@ -40,7 +45,7 @@ aside {
   background: var(--snow-clr);
   padding: 1.5rem 2rem;
   flex: 1;
-  min-width: 18rem;
+  min-width: 20rem;
 }
 main {
   background: var(--light-gray-clr);
@@ -53,13 +58,15 @@ main {
 }
 
 #project-form {
-  border: 5px solid purple;
   display: flex;
   justify-content: space-between;
 }
 .project-input {
+  width: 0;
   height: 2.5rem;
   border-color: transparent;
+  padding-left: 0.5rem;
+  font-size: 1.2rem;
   flex: 1;
 }
 .create-btn {
@@ -67,15 +74,26 @@ main {
   color: var(--white-clr);
   font-size: 1rem;
   padding: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 .project-input::placeholder {
   font-size: 1rem;
-  padding-left: 0.5rem;
   letter-spacing: 2px;
 }
 .projects-container {
-  border: 5px solid red;
   margin-top: 2rem;
   display: grid;
   gap: 1.5rem;
+}
+
+.project {
+  padding: 0.5rem 0.8rem;
+  cursor: pointer;
+  font-size: 1rem;
+  border: 3px solid transparent;
+}
+.project:hover {
+  border-color: var(--blue-clr);
+  padding-left: 1.2rem;
 }
