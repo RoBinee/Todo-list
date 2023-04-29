@@ -16,6 +16,15 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  font-family: sans-serif;
+}
+
+button {
+  cursor: pointer;
+  outline: transparent;
+}
+button:active {
+  opacity: 0.5;
 }
 header {
   background: var(--blue-clr);
@@ -48,10 +57,25 @@ main {
   display: flex;
   justify-content: space-between;
 }
-#project-form > input {
-  height: 2rem;
+.project-input {
+  height: 2.5rem;
+  border-color: transparent;
+  flex: 1;
+}
+.create-btn {
+  background: var(--blue-clr);
+  color: var(--white-clr);
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+.project-input::placeholder {
+  font-size: 1rem;
+  padding-left: 0.5rem;
+  letter-spacing: 2px;
 }
 .projects-container {
   border: 5px solid red;
   margin-top: 2rem;
+  display: grid;
+  gap: 1.5rem;
 }
