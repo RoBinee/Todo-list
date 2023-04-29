@@ -20,10 +20,17 @@ body {
 header {
   background: var(--point-clr);
   grid-column: 1 / -1;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
 }
 aside {
   background: var(--white-clr);
 }
 main {
   background: var(--light-gray-clr);
+}
+
+.header-title {
+  color: var(--font-clr);
 }
