@@ -13,17 +13,22 @@
     <section>
       <aside>
         <form action="" id="project-form">
-          <input type="text" placeholder="Add Project" autocomplete="off" />
-          <button type="submit">create</button>
+          <input
+            class="project-input"
+            type="text"
+            placeholder="Add Project"
+            autocomplete="off"
+          />
+          <button class="create-btn" type="submit">create</button>
         </form>
-        <div class="projects-container">
-          <article class="project">
+        <ul class="projects-container">
+          <li class="project">
             <h2 class="project-title">Project1</h2>
-          </article>
-          <article class="project">
+          </li>
+          <li class="project">
             <h2 class="project-title">Project2</h2>
-          </article>
-        </div>
+          </li>
+        </ul>
       </aside>
       <main>
         <div id="content">main content</div>
