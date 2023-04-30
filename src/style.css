@@ -1,11 +1,9 @@
 :root {
-  --light-gray-clr: #f9fafb;
-  --gray-clr: #b4c3c6;
   --white-clr: #fff;
   --font-clr: #1f2937;
-  --blue-clr: #009df7;
-  --snow-clr: #ecfbff;
-  --brdr-radius: 5px;
+  --red-clr: #e63946;
+  --gray-clr: #eeeeee;
+  --light-gray-clr: #f9fafb;
 }
 * {
   margin: 0;
@@ -32,8 +30,8 @@ ul {
   list-style: none;
 }
 header {
-  background: var(--blue-clr);
-  padding: 1.5rem;
+  background: var(--red-clr);
+  padding: 0.5rem;
   display: flex;
   align-items: center;
 }
@@ -42,7 +40,7 @@ section {
   display: flex;
 }
 aside {
-  background: var(--snow-clr);
+  background: var(--gray-clr);
   padding: 1.5rem 2rem;
   flex: 1;
   min-width: 20rem;
@@ -70,7 +68,7 @@ main {
   flex: 1;
 }
 .create-btn {
-  background: var(--blue-clr);
+  background: var(--red-clr);
   color: var(--white-clr);
   font-size: 1rem;
   padding: 0.5rem;
@@ -94,6 +92,6 @@ main {
   border: 3px solid transparent;
 }
 .project:hover {
-  border-color: var(--blue-clr);
+  border-color: var(--red-clr);
   padding-left: 1.2rem;
 }
