@@ -18,6 +18,7 @@
             type="text"
             placeholder="Add Project"
             autocomplete="off"
+            id="project"
           />
           <button class="create-btn" type="submit">create</button>
         </form>
@@ -36,6 +37,25 @@
           <div class="task-container">task container</div>
           <div class="btn-form-container">
             <button class="add-btn">+ Add Task</button>
+            <form action="" id="task-form">
+              <input
+                type="text"
+                class="task-form-input"
+                autocomplete="off"
+                id="title"
+                placeholder="title"
+                required
+              />
+              <select name="" id="priority" class="task-form-input">
+                <option value="urgent" selected>urgent</option>
+                <option value="not urgent">not urgent</option>
+              </select>
+              <input type="date" id="dueDate" class="task-form-input" />
+              <div class="btn-container">
+                <button class="task-form-btn">Cancel</button>
+                <button class="task-form-btn">Add</button>
+              </div>
+            </form>
           </div>
         </div>
       </main>
