@@ -50,6 +50,11 @@ main {
   flex: 4;
   min-width: 40rem;
 }
+::placeholder {
+  text-transform: capitalize;
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
 
 .header-title {
   color: var(--font-clr);
@@ -75,10 +80,7 @@ main {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
     rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
-.project-input::placeholder {
-  font-size: 1rem;
-  letter-spacing: 2px;
-}
+
 .projects-container {
   margin-top: 2rem;
   display: grid;
@@ -94,4 +96,76 @@ main {
 .project:hover {
   border-color: var(--red-clr);
   padding-left: 1.2rem;
+}
+
+/* main */
+#content {
+  border: 8px solid pink;
+  margin: 2rem auto;
+  width: 70%;
+}
+.content-title {
+  padding: 0.5rem 0;
+  font-size: 2.3rem;
+  border-bottom: 0.3rem solid var(--red-clr);
+}
+.task-container {
+  background: palegoldenrod;
+}
+.add-btn {
+  border: 1px solid black;
+  background: transparent;
+  width: 100%;
+  text-align: start;
+  font-size: 1.3rem;
+  padding: 0.5rem 0.3rem;
+  /* click add-btn and then display none, form show up */
+  /* display: none; */
+}
+.add-btn:hover {
+  background: var(--white-clr);
+}
+
+#task-form {
+  border: 2px solid blue;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  display: none;
+}
+
+.task-form-input {
+  font-size: 1rem;
+  padding: 0.2rem 0.3rem;
+}
+
+#title {
+  grid-column: 1 / -1;
+}
+
+option {
+  font-size: 1rem;
+}
+
+.btn-container {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: end;
+}
+
+.task-form-btn {
+  background: var(--red-clr);
+  color: var(--white-clr);
+  font-size: 1rem;
+  padding: 0.2rem;
+  width: 6rem;
+  justify-self: end;
+}
+
+.task-form-btn:first-child {
+  margin-right: 0.8rem;
+}
+.task-form-btn:active {
+  opacity: 0.5;
 }
