@@ -1,6 +1,7 @@
-const main = () => {
-  return `<main>
-        <div class="container">
+const main = (() => {
+  const main = document.createElement('main');
+
+  main.innerHTML = `<div class="container">
           <h2 class="main-title">Project Name</h2>
           <div class="task-container">
             <!-- single task start -->
@@ -43,8 +44,8 @@ const main = () => {
               </div>
             </form>
           </div>
-        </div>
-      </main>`;
-};
+        </div>`;
+  return main;
+})();
 
 export { main };
