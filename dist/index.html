@@ -34,7 +34,25 @@
       <main>
         <div id="content">
           <h2 class="content-title">Project Name</h2>
-          <div class="task-container">task container</div>
+          <div class="task-container">
+            <!-- single task start -->
+            <article class="task">
+              <div>
+                <input type="checkbox" class="checkbox" />
+                <p class="task-title">task title</p>
+              </div>
+              <div>
+                <p class="task-dueDate">2023-05-01</p>
+                <button class="task-btn edit">
+                  <i class="fa-solid fa-pen"></i>
+                </button>
+                <button class="task-btn delete">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </div>
+            </article>
+            <!-- single task end -->
+          </div>
           <div class="btn-form-container">
             <button class="add-btn">+ Add Task</button>
             <form action="" id="task-form">
