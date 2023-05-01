@@ -63,6 +63,12 @@ main {
   letter-spacing: 2px;
 }
 
+#content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .header-title {
   color: var(--font-clr);
 }
