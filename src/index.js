@@ -1,3 +1,5 @@
 import './style.css';
 import '@fortawesome/fontawesome-free/js/all';
-console.log('hi');
+import { loadPage } from './loadPage.js';
+
+loadPage();
