@@ -1,13 +1,4 @@
-const data = [
-  {
-    title: 'title',
-    dueDate: '2023-05-02',
-  },
-  {
-    title: 'title2',
-    dueDate: '2023-06-03',
-  },
-];
+import { todos } from '../data.js';
 
 const main = (() => {
   const main = document.createElement('main');
@@ -38,7 +29,7 @@ const main = (() => {
   main.innerHTML = `<div class="container">
           <h2 class="main-title">Project Name</h2>
           <div class="task-container">
-          ${formatData(data)}
+          ${formatData(todos)}
           </div>
           <div class="btn-form-container">
             <button class="add-btn">+ Add Task</button>

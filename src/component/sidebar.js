@@ -1,7 +1,8 @@
-const data = ['project test1', 'project test2'];
+import { projects } from '../data.js';
 
 const sidebar = (() => {
   const aside = document.createElement('aside');
+
   function formatData(rawData) {
     const result = rawData
       .map((item) => {
@@ -24,7 +25,7 @@ const sidebar = (() => {
     <button class="create-btn" type="submit">create</button>
   </form>
   <ul class="projects-container">
-  ${formatData(data)}
+  ${formatData(projects)}
   </ul>
     `;
   return aside;
