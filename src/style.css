@@ -104,10 +104,21 @@ main {
   cursor: pointer;
   font-size: 1rem;
   border: 3px solid transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .project:hover {
   border-color: var(--red-clr);
   padding-left: 1.2rem;
+}
+.project > .remove-btn {
+  width: 3rem;
+  font-size: 1rem;
+  color: var(--font-clr);
+}
+.project > .remove-btn:hover {
+  color: var(--red-clr);
 }
 
 /* main */
@@ -151,7 +162,7 @@ main {
   grid-template-columns: 1fr 1fr;
   gap: 0.5rem;
   padding: 0.5rem;
-  /* display: none; */
+  display: none;
 }
 
 .task-form-input {
