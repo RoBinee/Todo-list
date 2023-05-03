@@ -8,6 +8,7 @@ const sidebar = (() => {
       .map((item) => {
         return `<li class="project">
       <h2 class="project-title">${item.project}</h2>
+      <button class="remove-btn"><i class="fa-solid fa-xmark"></i></button>
     </li>`;
       })
       .join(' ');
