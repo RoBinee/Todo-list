@@ -1,13 +1,13 @@
-import { projects } from '../data.js';
+import { data } from '../data.js';
 
 const sidebar = (() => {
   const aside = document.createElement('aside');
 
-  function formatData(rawData) {
+  function formatProject(rawData) {
     const result = rawData
       .map((item) => {
         return `<li class="project">
-      <h2 class="project-title">${item}</h2>
+      <h2 class="project-title">${item.project}</h2>
     </li>`;
       })
       .join(' ');
@@ -25,7 +25,7 @@ const sidebar = (() => {
     <button class="create-btn" type="submit">create</button>
   </form>
   <ul class="projects-container">
-  ${formatData(projects)}
+  ${formatProject(data)}
   </ul>
     `;
   return aside;
