@@ -4,10 +4,9 @@ import { getElement } from './getElement.js';
 
 function changeMain(projectTitle) {
   //get clicked project title
-  //   const projectTitle = e.currentTarget.querySelector('.project-title');
   //find that project in data
   const index = data.findIndex((item) => {
-    return item.project === projectTitle.textContent;
+    return item.project === projectTitle;
   });
   //if find the data, it will not return -1
   if (index !== -1) {
