@@ -100,25 +100,37 @@ main {
 }
 
 .project {
-  padding: 0.5rem 0.8rem;
   cursor: pointer;
-  font-size: 1rem;
-  border: 3px solid transparent;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  border: 3px solid transparent;
 }
 .project:hover {
   border-color: var(--red-clr);
+}
+.project-title {
+  font-size: 1.5rem;
+  flex: 6;
+  padding: 0.3rem 0.8rem;
+}
+.project-title:hover {
   padding-left: 1.2rem;
 }
-.project > .remove-btn {
-  width: 3rem;
-  font-size: 1rem;
+.remove-btn {
+  flex: 1;
+  font-size: 1.2rem;
   color: var(--font-clr);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.project > .remove-btn:hover {
+.remove-btn:hover {
   color: var(--red-clr);
+}
+.remove-btn > svg {
+  display: block;
 }
 
 /* main */
