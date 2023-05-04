@@ -10,12 +10,17 @@ function changeMain(e) {
     return item.project === projectTitle.textContent;
   });
   //if find the data, it will not return -1
-  //make the object into main element
-  const formattedMain = main(index);
-  //get main to replace
-  const currentMain = getElement('main');
-  //load different main
-  currentMain.replaceWith(formattedMain);
+  if (index !== -1) {
+    //make the object into main element
+    const formattedMain = main(index);
+    //get main to replace
+    const currentMain = getElement('main');
+    console.log(formattedMain == currentMain);
+    //load different main
+    currentMain.replaceWith(formattedMain);
+  } else if (index === -1) {
+    console.log('error!');
+  }
 }
 
 export { changeMain };
