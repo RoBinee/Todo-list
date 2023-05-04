@@ -1,6 +1,6 @@
 import { data } from '../data.js';
 
-const main = (() => {
+const main = (index) => {
   const main = document.createElement('main');
 
   function formatTodo(obj) {
@@ -28,9 +28,9 @@ const main = (() => {
   }
 
   main.innerHTML = `<div class="container">
-          <h2 class="main-title">${data[0].project}</h2>
+          <h2 class="main-title">${data[index].project}</h2>
           <div class="task-container">
-          ${formatTodo(data[0])}
+          ${formatTodo(data[index])}
           </div>
           <div class="btn-form-container">
             <button class="add-btn">+ Add Task</button>
@@ -56,6 +56,6 @@ const main = (() => {
           </div>
         </div>`;
   return main;
-})();
+};
 
 export { main };
