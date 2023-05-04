@@ -13,6 +13,8 @@ const projects = document.querySelectorAll('.project');
 
 projects.forEach((project) => {
   project.addEventListener('click', (e) => {
+    //if clicked project is already presented in main
+    //don't change main
     changeMain(e);
   });
 });
