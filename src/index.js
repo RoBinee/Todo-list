@@ -9,7 +9,6 @@ loadPage();
 
 const sidebarForm = getElement(undefined, 'project-form');
 const mainForm = getElement(undefined, 'task-form');
-const projects = document.querySelectorAll('.project');
 const projectsContainer = getElement('.projects-container');
 
 projectsContainer.addEventListener('click', (e) => {
