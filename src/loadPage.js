@@ -1,13 +1,16 @@
 import { header } from './component/header.js';
 import { sidebar } from './component/sidebar.js';
 import { main } from './component/main.js';
+import { controllDisplay } from './controllDisplay';
+// why added js at the end of file have an error?
 
 function loadPage() {
   const content = document.getElementById('content');
   // load header, sidebar, main
   const section = document.createElement('section');
-  section.append(sidebar, main);
+  section.append(sidebar, main(0));
   content.append(header, section);
+  controllDisplay();
 }
 
 export { loadPage };
