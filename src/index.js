@@ -10,12 +10,20 @@ loadPage();
 const sidebarForm = getElement(undefined, 'project-form');
 const mainForm = getElement(undefined, 'task-form');
 const projects = document.querySelectorAll('.project');
+const projectsContainer = getElement('.projects-container');
 
+projectsContainer.addEventListener('click', (e) => {
+  const target = e.target;
+  if (target.className === 'project-title') {
+    changeMain(target);
+  }
+});
+//I think it is better idea to use projectsContainer, not project
 projects.forEach((project) => {
   project.addEventListener('click', (e) => {
     //if clicked project is already presented in main
     //don't change main
-    changeMain(e);
+    // changeMain(e);
   });
 });
 
