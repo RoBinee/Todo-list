@@ -8,8 +8,10 @@ function loadInitialPage() {
   const content = document.getElementById('content');
   // load header, sidebar, main
   const section = document.createElement('section');
-  section.append(sidebar, main(0));
+  const mainElement = main(0);
+  section.append(sidebar, mainElement);
   content.append(header, section);
+  controllDisplay(mainElement);
 }
 
 export { loadInitialPage };
