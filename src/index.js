@@ -1,11 +1,11 @@
 import './style.css';
 import '@fortawesome/fontawesome-free/js/all';
-import { loadPage } from './loadPage.js';
 import { getElement } from './getElement.js';
 import { addNewProject } from './addNewProject.js';
 import { changeMain } from './changeMain.js';
+import { loadInitialPage } from './loadInitialPage.js';
 
-loadPage();
+loadInitialPage();
 
 const sidebarForm = getElement(undefined, 'project-form');
 const mainForm = getElement(undefined, 'task-form');
