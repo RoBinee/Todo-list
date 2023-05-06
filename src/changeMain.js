@@ -1,7 +1,7 @@
 import { data } from './data.js';
 import { main } from './component/main.js';
 import { getElement } from './getElement.js';
-import { controllDisplay } from './controllDisplay.js';
+import { toggleEvents } from './controllFormContainer.js';
 
 function changeMain(projectTitle) {
   //get clicked project title
@@ -17,7 +17,7 @@ function changeMain(projectTitle) {
     //get main to replace
     const currentMain = getElement('main');
     //add and remove eventListener
-    controllDisplay(formattedMain, currentMain);
+    toggleEvents(formattedMain, currentMain);
 
     //load different main
     currentMain.replaceWith(formattedMain);
