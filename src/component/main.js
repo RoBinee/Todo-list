@@ -50,7 +50,7 @@ const main = (index) => {
               <input type="date" id="dueDate" class="task-form-input" />
               <div class="btn-container">
                 <button type="button" class="task-form-btn cancel">Cancel</button>
-                <button type="button" class="task-form-btn add">Add</button>
+                <button type="submit" class="task-form-btn add">Add</button>
               </div>
             </form>
           </div>
