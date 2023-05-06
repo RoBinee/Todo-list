@@ -14,9 +14,10 @@ function changeMain(projectTitle) {
     //?remove addEventListener in form btn
     //make the object into main element
     const formattedMain = main(index);
-    controllDisplay(formattedMain);
     //get main to replace
     const currentMain = getElement('main');
+    //add and remove eventListener
+    controllDisplay(formattedMain, currentMain);
 
     //load different main
     currentMain.replaceWith(formattedMain);
