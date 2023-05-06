@@ -34,7 +34,7 @@ const main = (index) => {
           </div>
           <div class="btn-form-container">
             <button class="add-btn">+ Add Task</button>
-            <form action="" id="task-form">
+            <form action="" id="task-form" novalidate>
               <input
                 type="text"
                 class="task-form-input"
@@ -49,12 +49,13 @@ const main = (index) => {
               </select>
               <input type="date" id="dueDate" class="task-form-input" />
               <div class="btn-container">
-                <button class="task-form-btn">Cancel</button>
-                <button class="task-form-btn">Add</button>
+                <button class="task-form-btn cancel">Cancel</button>
+                <button class="task-form-btn add">Add</button>
               </div>
             </form>
           </div>
         </div>`;
+
   return main;
 };
 
