@@ -10,7 +10,6 @@ function loadInitialPage() {
   const section = document.createElement('section');
   section.append(sidebar, main(0));
   content.append(header, section);
-  controllDisplay();
 }
 
 export { loadInitialPage };
