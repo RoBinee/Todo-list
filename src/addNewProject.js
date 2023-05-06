@@ -1,9 +1,6 @@
 import { getElement } from './getElement.js';
 import { data } from './data.js';
-
-const dataCreator = (title) => {
-  return { project: title, todos: [] };
-};
+import { dataCreator } from './dataCreator.js';
 
 function addNewProject() {
   //add new project on the screen
@@ -28,7 +25,6 @@ function addNewProject() {
     const newData = dataCreator(title);
     //2. push it to data
     data.push(newData);
-    console.log(data);
   }
 
   if (projectName.length === 0) {
