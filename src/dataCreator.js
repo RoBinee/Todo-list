@@ -1,5 +1,5 @@
-const dataCreator = (title) => {
-  return { project: title, todos: [] };
+const Project = (title) => {
+  return { title, todos: [] };
 };
 
-export { dataCreator };
+export { Project };
