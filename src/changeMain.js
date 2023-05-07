@@ -17,7 +17,7 @@ function changeMain(projectTitle) {
     //get main to replace
     const currentMain = getElement('main');
     //add and remove eventListener
-    controllForm(formattedMain, currentMain);
+    controllForm(formattedMain, currentMain, index);
 
     //load different main
     currentMain.replaceWith(formattedMain);
