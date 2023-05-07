@@ -1,4 +1,4 @@
-function formatTodoArticle(title, dueDate) {
+function formatTodoArticle({ title, dueDate }) {
   const article = document.createElement('article');
   article.classList.add('task');
   article.innerHTML = `<div>
