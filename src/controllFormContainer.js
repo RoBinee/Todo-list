@@ -3,15 +3,6 @@ function controllForm(main, currentMain) {
   const taskForm = main.querySelector('#task-form');
   const cancelBtn = main.querySelector('.cancel');
 
-  // function displayForm() {
-  //   taskForm.style.display = 'grid';
-  //   addBtn.style.display = 'none';
-  // }
-  // function hideForm() {
-  //   taskForm.style.display = 'none';
-  //   addBtn.style.display = 'block';
-  // }
-
   function displayElement(element, display) {
     if (display) {
       element.style.display = display;
@@ -45,7 +36,6 @@ function controllForm(main, currentMain) {
     taskForm.removeEventListener('submit', test);
   }
 
-  // addBtn.addEventListener('click', displayForm);
   addBtn.addEventListener('click', () => {
     hideElement(addBtn);
     displayElement(taskForm, 'grid');
