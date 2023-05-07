@@ -1,6 +1,6 @@
 const data = [
   {
-    project: 'One project',
+    title: 'One project',
     todos: [
       {
         title: 'One project todo',
@@ -13,7 +13,7 @@ const data = [
     ],
   },
   {
-    project: 'Two project',
+    title: 'Two project',
     todos: [
       {
         title: 'Two project todo',
