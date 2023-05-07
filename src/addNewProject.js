@@ -1,19 +1,18 @@
-import { getElement } from './getElement.js';
 import { data } from './data.js';
 import { Project } from './dataCreator.js';
 import { changeMain } from './changeMain.js';
+import { elementFunc } from './elementFunc.js';
 
 function addNewProject() {
   //add new project on the screen
-  const container = getElement('.projects-container');
-  const formInput = getElement('.project-input');
+  const container = elementFunc.getElement('.projects-container');
+  const formInput = elementFunc.getElement('.project-input');
   const projectName = formInput.value;
 
   function showNewProject(title) {
     //show new project on the screen
     //make element using input.value
-    const element = document.createElement('li');
-    element.classList.add('project');
+    const element = elementFunc.createElement('li', 'project');
     element.innerHTML = `<h2 class="project-title">${title}</h2>
         <button class="remove-btn"><i class="fa-solid fa-xmark"></i></button>`;
     //append in projects-container

@@ -1,15 +1,15 @@
 import './style.css';
 import '@fortawesome/fontawesome-free/js/all';
-import { getElement } from './getElement.js';
 import { addNewProject } from './addNewProject.js';
 import { changeMain } from './changeMain.js';
 import { loadInitialPage } from './loadInitialPage.js';
+import { elementFunc } from './elementFunc';
 
 loadInitialPage();
 
-const sidebarForm = getElement(undefined, 'project-form');
-const mainForm = getElement(undefined, 'task-form');
-const projectsContainer = getElement('.projects-container');
+const sidebarForm = elementFunc.getElement('#project-form');
+const mainForm = elementFunc.getElement('#task-form');
+const projectsContainer = elementFunc.getElement('.projects-container');
 
 projectsContainer.addEventListener('click', (e) => {
   const target = e.target;

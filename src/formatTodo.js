@@ -1,6 +1,6 @@
+import { elementFunc } from './elementFunc';
 function formatTodoArticle({ title, dueDate }) {
-  const article = document.createElement('article');
-  article.classList.add('task');
+  const article = elementFunc.createElement('article', 'task');
   article.innerHTML = `<div>
      <input type="checkbox" class="checkbox" />
      <p class="task-title">${title}</p>

@@ -1,7 +1,7 @@
 import { data } from './data.js';
 import { main } from './component/main.js';
-import { getElement } from './getElement.js';
 import { controllForm } from './controllFormContainer.js';
+import { elementFunc } from './elementFunc.js';
 
 function changeMain(projectTitle) {
   //get clicked project title
@@ -15,7 +15,7 @@ function changeMain(projectTitle) {
     //make the object into main element
     const formattedMain = main(index);
     //get main to replace
-    const currentMain = getElement('main');
+    const currentMain = elementFunc.getElement('main');
     //add and remove eventListener
     controllForm(formattedMain, currentMain, index);
 

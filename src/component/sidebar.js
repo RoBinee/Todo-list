@@ -1,7 +1,8 @@
 import { data } from '../data.js';
+import { elementFunc } from '../elementFunc.js';
 
-const sidebar = (() => {
-  const aside = document.createElement('aside');
+const sidebar = () => {
+  const aside = elementFunc.createElement('aside');
 
   function formatProject(rawData) {
     const result = rawData
@@ -29,6 +30,6 @@ const sidebar = (() => {
   ${formatProject(data)}
   </ul>`;
   return aside;
-})();
+};
 
 export { sidebar };
