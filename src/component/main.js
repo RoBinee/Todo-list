@@ -2,9 +2,9 @@ import { data } from '../data.js';
 
 const main = (index) => {
   const main = document.createElement('main');
+  const { title, todos } = data[index];
 
-  function formatTodo(obj) {
-    const { todos } = obj;
+  function formatTodo(todos) {
     //todos are array, so we need to use map func
     const result = todos
       .map((todo) => {
@@ -29,9 +29,9 @@ const main = (index) => {
   }
 
   main.innerHTML = `<div class="container">
-          <h2 class="main-title">${data[index].title}</h2>
+          <h2 class="main-title">${title}</h2>
           <div class="task-container">
-          ${formatTodo(data[index])}
+          ${formatTodo(todos)}
           </div>
           <div class="btn-form-container">
             <button class="add-btn">+ Add Task</button>
