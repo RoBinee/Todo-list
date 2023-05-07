@@ -1,16 +1,31 @@
 function controllForm(main, currentMain) {
-  function displayForm() {
-    taskForm.style.display = 'grid';
-    addBtn.style.display = 'none';
+  const addBtn = main.querySelector('.add-btn');
+  const taskForm = main.querySelector('#task-form');
+  const cancelBtn = main.querySelector('.cancel');
+
+  // function displayForm() {
+  //   taskForm.style.display = 'grid';
+  //   addBtn.style.display = 'none';
+  // }
+  // function hideForm() {
+  //   taskForm.style.display = 'none';
+  //   addBtn.style.display = 'block';
+  // }
+
+  function displayElement(element, display) {
+    if (display) {
+      element.style.display = display;
+    } else {
+      element.style.display = 'block';
+    }
   }
-  function hideForm() {
-    taskForm.style.display = 'none';
-    addBtn.style.display = 'block';
+  function hideElement(element) {
+    element.style.display = 'none';
   }
 
   function test(e) {
     e.preventDefault();
-    console.log('submit');
+    console.log(e);
   }
 
   if (currentMain) {
@@ -19,16 +34,31 @@ function controllForm(main, currentMain) {
     const taskForm = currentMain.querySelector('#task-form');
     const cancelBtn = currentMain.querySelector('.cancel');
 
-    addBtn.removeEventListener('click', displayForm);
-    cancelBtn.removeEventListener('click', hideForm);
+    addBtn.removeEventListener('click', () => {
+      hideElement(addBtn);
+      displayElement(taskForm, 'grid');
+    });
+    cancelBtn.removeEventListener('click', () => {
+      hideElement(taskForm);
+      displayElement(addBtn);
+    });
     taskForm.removeEventListener('submit', test);
   }
-  const addBtn = main.querySelector('.add-btn');
-  const taskForm = main.querySelector('#task-form');
-  const cancelBtn = main.querySelector('.cancel');
 
-  addBtn.addEventListener('click', displayForm);
-  cancelBtn.addEventListener('click', hideForm);
-  taskForm.addEventListener('submit', test);
+  // addBtn.addEventListener('click', displayForm);
+  addBtn.addEventListener('click', () => {
+    hideElement(addBtn);
+    displayElement(taskForm, 'grid');
+  });
+
+  cancelBtn.addEventListener('click', () => {
+    hideElement(taskForm);
+    displayElement(addBtn);
+  });
+
+  taskForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    console.log(e);
+  });
 }
 export { controllForm };
