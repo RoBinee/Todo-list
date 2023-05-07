@@ -1,6 +1,9 @@
 import { displayElement, hideElement } from './displayElement.js';
+import { formatTodoArticle } from './formatTodo.js';
+import { Todo } from './dataCreator.js';
+import { data } from './data.js';
 
-function controllForm(main, currentMain) {
+function controllForm(main, currentMain, index) {
   const addBtn = main.querySelector('.add-btn');
   const taskForm = main.querySelector('#task-form');
   const cancelBtn = main.querySelector('.cancel');
@@ -12,22 +15,15 @@ function controllForm(main, currentMain) {
     const priorityValue = getSelectedOptionValue(priority);
     const dueDate = taskForm.querySelector('#dueDate');
 
+    //save form data into data.js
+    //1. make structure of Todo object
+    const singleTodo = Todo(title.value, dueDate.value);
+
+    //2. push that object into Todos Array
+    data[index].todos.push(singleTodo);
+
     //format formdata into article
-    const article = document.createElement('article');
-    article.classList.add('task');
-    article.innerHTML = `<div>
-     <input type="checkbox" class="checkbox" />
-     <p class="task-title">${title.value}</p>
-   </div>
-   <div>
-     <p class="task-dueDate">${dueDate.value}</p>
-     <button class="task-btn edit">
-       <i class="fa-solid fa-pen"></i>
-     </button>
-     <button class="task-btn delete">
-       <i class="fa-solid fa-trash"></i>
-     </button>
-   </div>`;
+    const article = formatTodoArticle(title.value, dueDate.value);
     //add it into the container
     const taskContainer = main.querySelector('.task-container');
     taskContainer.append(article);
