@@ -23,7 +23,7 @@ function controllForm(main, currentMain, index) {
     data[index].todos.push(singleTodo);
 
     //format formdata into article
-    const article = formatTodoArticle(title.value, dueDate.value);
+    const article = formatTodoArticle(singleTodo);
     //add it into the container
     const taskContainer = main.querySelector('.task-container');
     taskContainer.append(article);
