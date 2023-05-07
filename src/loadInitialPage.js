@@ -5,13 +5,14 @@ import { main } from './component/main.js';
 import { controllForm } from './controllFormContainer.js';
 
 function loadInitialPage() {
+  const initialIndex = 0;
   const content = document.getElementById('content');
   // load header, sidebar, main
   const section = document.createElement('section');
-  const mainElement = main(0);
+  const mainElement = main(initialIndex);
   section.append(sidebar, mainElement);
   content.append(header, section);
-  controllForm(mainElement);
+  controllForm(mainElement, undefined, initialIndex);
 }
 
 export { loadInitialPage };
