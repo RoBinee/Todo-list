@@ -7,7 +7,7 @@ const sidebar = (() => {
     const result = rawData
       .map((item) => {
         return `<li class="project">
-      <h2 class="project-title">${item.project}</h2>
+      <h2 class="project-title">${item.title}</h2>
       <button class="remove-btn"><i class="fa-solid fa-xmark"></i></button>
     </li>`;
       })
@@ -27,8 +27,7 @@ const sidebar = (() => {
   </form>
   <ul class="projects-container">
   ${formatProject(data)}
-  </ul>
-    `;
+  </ul>`;
   return aside;
 })();
 

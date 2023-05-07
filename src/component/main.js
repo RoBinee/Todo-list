@@ -5,6 +5,7 @@ const main = (index) => {
 
   function formatTodo(obj) {
     const { todos } = obj;
+    //todos are array, so we need to use map func
     const result = todos
       .map((todo) => {
         return `<article class="task">
@@ -28,7 +29,7 @@ const main = (index) => {
   }
 
   main.innerHTML = `<div class="container">
-          <h2 class="main-title">${data[index].project}</h2>
+          <h2 class="main-title">${data[index].title}</h2>
           <div class="task-container">
           ${formatTodo(data[index])}
           </div>

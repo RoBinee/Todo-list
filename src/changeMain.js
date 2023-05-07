@@ -7,7 +7,7 @@ function changeMain(projectTitle) {
   //get clicked project title
   //find that project in data
   const index = data.findIndex((item) => {
-    return item.project === projectTitle;
+    return item.title === projectTitle;
   });
   //if find the data, it will not return -1
   if (index !== -1) {

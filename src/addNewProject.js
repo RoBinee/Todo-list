@@ -1,6 +1,7 @@
 import { getElement } from './getElement.js';
 import { data } from './data.js';
-import { dataCreator } from './dataCreator.js';
+import { Project } from './dataCreator.js';
+import { changeMain } from './changeMain.js';
 
 function addNewProject() {
   //add new project on the screen
@@ -22,7 +23,7 @@ function addNewProject() {
   function saveNewProject(title) {
     //save new project in data
     //1. make data object structure of a new added project
-    const newData = dataCreator(title);
+    const newData = Project(title);
     //2. push it to data
     data.push(newData);
   }
@@ -33,6 +34,8 @@ function addNewProject() {
   } else if (projectName.length > 0) {
     saveNewProject(projectName);
     showNewProject(projectName);
+    //change the main to new project main
+    changeMain(projectName);
     // clean input value
     formInput.value = '';
   }
