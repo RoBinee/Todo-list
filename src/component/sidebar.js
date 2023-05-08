@@ -1,4 +1,4 @@
-import { data } from '../data.js';
+import { obj } from '../data.js';
 import { elementFunc } from '../elementFunc.js';
 import { main } from './main.js';
 
@@ -29,7 +29,7 @@ const sidebar = (() => {
       <button class="create-btn" type="submit">create</button>
     </form>
     <ul class="projects-container">
-    ${formatProject(data)}
+    ${formatProject(obj.projects)}
     </ul>`;
 
     return aside;
@@ -58,7 +58,7 @@ const sidebar = (() => {
       //1. make data object structure of a new added project
       const newData = Project(title);
       //2. push it to data
-      data.push(newData);
+      obj.projects.push(newData);
     }
 
     if (projectName.length === 0) {
@@ -73,6 +73,29 @@ const sidebar = (() => {
       formInput.value = '';
     }
   };
+  const removeProject = (target, projectsContainer) => {
+    const projectTitle = target.previousElementSibling.textContent;
+    //remove that project-title from the screen and data
+    const index = obj.projects.findIndex((item) => {
+      return item.title === projectTitle;
+    });
+    if (index !== -1) {
+      //find the index
+      //remove that project data from the data.js
+      const newData = obj.projects.filter((item) => {
+        if (item.title !== projectTitle) {
+          return item;
+        }
+      });
+      //assign newData into data.js
+      obj.projects = newData;
+      //remove project-title on the screen
+      const projectElement = target.parentElement;
+      projectsContainer.removeChild(projectElement);
+    } else if (index === -1) {
+      console.log('error');
+    }
+  };
   //setEvent?
   const setEvent = () => {
     const sidebarForm = elementFunc.getElement('#project-form');
@@ -82,8 +105,9 @@ const sidebar = (() => {
       const target = e.target;
       if (target.className === 'project-title') {
         main.changeMain(target.textContent);
+      } else if (target.className === 'remove-btn') {
+        removeProject(target, projectsContainer);
       }
-      console.log(target);
     });
 
     sidebarForm.addEventListener('submit', (e) => {

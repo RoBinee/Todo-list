@@ -1,4 +1,4 @@
-import { data } from '../data.js';
+import { obj } from '../data.js';
 import { elementFunc } from '../elementFunc.js';
 // import { Todo } from '../dataCreator.js';
 
@@ -22,7 +22,7 @@ const main = (() => {
   };
   const createMain = (index) => {
     //find the data and use it to create main
-    const { title, todos } = data[index];
+    const { title, todos } = obj.projects[index];
     //create main element
     const main = elementFunc.createElement('main');
     //create container
@@ -83,7 +83,7 @@ const main = (() => {
     const singleTodo = Todo(title.value, dueDate.value);
 
     //2-2. push that object into Todos Array
-    data[index].todos.push(singleTodo);
+    obj.projects[index].todos.push(singleTodo);
 
     /*Show new article on the screen */
     //format form data into article
@@ -152,7 +152,7 @@ const main = (() => {
   const changeMain = (projectTitle) => {
     //get clicked project title
     //find that project in data
-    const index = data.findIndex((item) => {
+    const index = obj.projects.findIndex((item) => {
       return item.title === projectTitle;
     });
     //if find the data, it will not return -1
