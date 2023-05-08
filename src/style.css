@@ -131,6 +131,7 @@ main {
 }
 .remove-btn > svg {
   display: block;
+  pointer-events: none;
 }
 
 /* main */
