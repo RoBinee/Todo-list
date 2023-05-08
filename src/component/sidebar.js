@@ -73,6 +73,7 @@ const sidebar = (() => {
       formInput.value = '';
     }
   };
+  //add remove project
   const removeProject = (target, projectsContainer) => {
     const projectTitle = target.previousElementSibling.textContent;
     //remove that project-title from the screen and data
