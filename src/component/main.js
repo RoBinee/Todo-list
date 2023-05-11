@@ -36,6 +36,8 @@ const main = (() => {
     const todoElements = todos.map((todo) => formatTodoArticle(todo));
     todoElements.forEach((todo) => {
       taskContainer.append(todo);
+      //add event listener
+      todo.addEventListener('click', toggleArticleEvent);
     });
     //create div form-container
     const formContainer = elementFunc.createElement('div', 'form-container');
@@ -93,6 +95,9 @@ const main = (() => {
     const taskContainer = document.querySelector('.task-container');
     taskContainer.append(article);
 
+    //add event all btns in new article
+    article.addEventListener('click', toggleArticleEvent);
+
     //clean the inputs
     title.value = '';
     dueDate.value = '';
@@ -147,6 +152,10 @@ const main = (() => {
       //add new article on the screen
       //save new article in the data
     });
+  };
+
+  const toggleArticleEvent = () => {
+    console.log('hi');
   };
 
   const changeMain = (projectTitle) => {
